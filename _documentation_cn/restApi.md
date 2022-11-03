@@ -1,4 +1,4 @@
----
+﻿---
 title: REST API
 position_number: 1
 parameters:
@@ -8,7 +8,7 @@ parameters:
 content_markdown: |-
     测试:
 
-    **基地址:http://sapi.xt-uat.com**
+    **基地址:http://soeasyex.github.io/**
     {: .info}
 
 left_code_blocks:
