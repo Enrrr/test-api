@@ -1,5 +1,5 @@
 ---
-title: 当前挂单撤销
+title: 撤销当前挂单
 position_number: 8
 type: delete
 split: -------------------------------------
@@ -17,7 +17,8 @@ parameters:
         type: string
         mandatory: false
         default:
-        description: "业务类型 \_SPOT-现货, LEVER-杠杆, FINANCE-理财, FUTURES_U-合约U本位, FUTURES_C-合约币本位, FUTURES_ALL-全币种合约"
+        description: >-
+            业务类型  SPOT-现货, LEVER-杠杆
         ranges:
     -
         name: side
@@ -26,7 +27,7 @@ parameters:
         default:
         description: BUY-买,SELL-卖
         ranges:
-content_markdown:
+content_markdown: 注意：参数以json形式放在body中
 left_code_blocks:
     -
         code_block:
@@ -38,7 +39,15 @@ left_code_blocks:
         language: python
 right_code_blocks:
     -
-        code_block: "{\r\n  \"rc\": 0,\r\n  \"mc\": \"string\",\r\n  \"ma\": [\r\n    {}\r\n  ],\r\n  \"result\": {}\r\n}"
+        code_block: |-
+                {
+                  "rc": 0,
+                  "mc": "string",
+                  "ma": [
+                    {}
+                  ],
+                  "result": {}
+                }
         title: Response
         language: json
 ---

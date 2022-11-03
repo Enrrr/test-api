@@ -1,4 +1,4 @@
-﻿---
+---
 title: 基地址
 position_number: 1
 type:
@@ -12,7 +12,7 @@ parameters:
         default:
         description:
         ranges:
-content_markdown: '**基地址 &nbsp;ws://soeasyex.github.io/public**'
+content_markdown: '**wss://stream.xt.com/public**'
 left_code_blocks:
     -
         code_block:

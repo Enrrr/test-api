@@ -16,7 +16,7 @@ parameters:
         type: string
         mandatory: false
         default:
-        description: 客户端ID(最长32位)
+        description: 客户端ID正则：^[a-zA-Z0-9_]{4,32}$
         ranges:
     -
         name: side
@@ -44,7 +44,8 @@ parameters:
         type: string
         mandatory: true
         default:
-        description: "业务类型 \_SPOT-现货, LEVER-杠杆, FINANCE-理财, FUTURES_U-合约U本位, FUTURES_C-合约币本位, FUTURES_ALL-全币种合约"
+        description: >-
+            业务类型  SPOT-现货, LEVER-杠杆
         ranges:
     -
         name: price
@@ -67,7 +68,11 @@ parameters:
         default:
         description: 金额。现价不填；市价按金额下单时必填
         ranges:
-content_markdown:
+content_markdown: >-
+    #### **限流规则**
+
+    50/s/apikey
+
 left_code_blocks:
     -
         code_block: |-
@@ -83,7 +88,17 @@ left_code_blocks:
         language: python
 right_code_blocks:
     -
-        code_block: "{\r\n  \"rc\": 0,\r\n  \"mc\": \"string\",\r\n  \"ma\": [\r\n    {}\r\n  ],\r\n  \"result\": {\r\n    \"orderId\": \"6216559590087220004\"   //订单ID\r\n  }\r\n}"
+        code_block: |-
+                {
+                  "rc": 0,
+                  "mc": "string",
+                  "ma": [
+                    {}
+                  ],
+                  "result": {
+                    "orderId": "6216559590087220004"   //订单ID
+                  }
+                }
         title: Response
         language: json
 ---

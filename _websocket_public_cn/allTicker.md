@@ -1,5 +1,5 @@
 ---
-title: 所有ticker(每3秒推⼀次)
+title: 所有ticker(有变化才推)
 position_number: 12
 type:
 description: |+
@@ -23,7 +23,12 @@ left_code_blocks:
         language: python
 right_code_blocks:
     -
-        code_block: "{\r\n    \"topic\": \"tickers\", \r\n    \"event\": \"tickers\", \r\n    \"data\": [ ]  // 同 ticker\r\n}"
+        code_block: |-
+            {
+                "topic": "tickers", 
+                "event": "tickers", 
+                "data": [ ]  // 同 ticker
+            }
         title: Response
         language: json
 ---
